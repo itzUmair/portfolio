@@ -1,8 +1,9 @@
+import ContactForm from "./ContactForm";
 import Social from "./Social";
 
 export default function Contact() {
   return (
-    <section>
+    <section id="contact">
       <h2 className="font-bold text-3xl lg:text-6xl leading-[45px] lg:leading-[90px] lg:text-center">
         Contact Me
       </h2>
@@ -50,34 +51,7 @@ export default function Contact() {
             Muhammad Umair Khan
           </p>
         </div>
-        <form action="" className="flex flex-col flex-1 gap-y-4">
-          <input
-            className="bg-transparent border-2 border-white outline-none px-4 py-2 lg:text-2xl"
-            type="text"
-            name="name"
-            id="name"
-            placeholder="Your good name"
-          />
-          <input
-            className="bg-transparent border-2 border-white outline-none px-4 py-2 lg:text-2xl"
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Your email"
-          />
-          <textarea
-            className="bg-transparent border-2 border-white outline-none px-4 py-2 lg:text-2xl min-h-40"
-            name="message"
-            id="message"
-            placeholder="What's on your mind?"
-          ></textarea>
-          <button
-            type="submit"
-            className="border-2 border-white w-fit ml-auto px-4 py-2 flex items-center gap-x-2 text-xl lg:text-2xl"
-          >
-            Send
-          </button>
-        </form>
+        <ContactForm />
       </div>
     </section>
   );

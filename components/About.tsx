@@ -1,6 +1,9 @@
 export default function About() {
   return (
-    <section className="flex flex-col lg:flex-row gap-y-8 gap-x-8 justify-between">
+    <section
+      id="about"
+      className="flex flex-col lg:flex-row gap-y-8 gap-x-8 justify-between"
+    >
       <div>
         <h2 className="font-bold text-3xl lg:text-6xl leading-[45px] lg:leading-[90px]">
           From Passion <br /> To Profession

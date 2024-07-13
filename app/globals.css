@@ -3,11 +3,12 @@
 @tailwind utilities;
 
 :root {
-  --background-primary: #120F0F;
-  --text-primary: #FFFFFF;
+  --background-primary: #120f0f;
+  --text-primary: #ffffff;
 }
 
 body {
-	background-color: var(--background-primary);
+  background-color: var(--background-primary);
   color: var(--text-primary);
+  scroll-behavior: smooth;
 }
