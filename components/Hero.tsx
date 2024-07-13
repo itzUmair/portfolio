@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="h-screen pt-32 md:h-auto md::mt-16">
+    <section className="h-screen pt-32 md:h-auto md:pt-24">
       <h2 className="text-xl lg:text-2xl">Hey visitor!</h2>
       <h1 className="font-bold text-4xl md:text-6xl lg:text-8xl leading-[60px] md:leading-[80px] lg:leading-[130px]">Welcome To <br /> The Portfolio Of <br /> Muhammad Umair Khan</h1>
       <div className="flex gap-x-8 my-4">
