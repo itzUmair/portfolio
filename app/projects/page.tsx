@@ -2,9 +2,12 @@ import ProjectCard from "@/components/ProjectCard";
 import { Project } from "@/types";
 
 async function getProjects() {
-  const response = await fetch("http://localhost:3000/api/v1/projects", {
-    next: { revalidate: 86400 },
-  });
+  const response = await fetch(
+    `${process.env.PUBLIC_API_BASE_URL}/api/v1/projects`,
+    {
+      next: { revalidate: 86400 },
+    }
+  );
 
   if (!response.ok) {
     throw new Error("Something went wrong");
