@@ -1,6 +1,7 @@
 "use client";
 
 import axios from "axios";
+import { ApiError } from "next/dist/server/api-utils";
 import { FormEvent, useState } from "react";
 
 function ContactForm() {
@@ -40,7 +41,8 @@ function ContactForm() {
         const response = await axios.post("/api/v1/contact", formData);
         setSuccessMessage(response.data.message);
       } catch (error) {
-        setErrorMessage(error.message);
+        const err = error as ApiError;
+        setErrorMessage(err.message);
       }
     }
   };
