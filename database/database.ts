@@ -10,6 +10,4 @@ const connectDB = async () => {
   }
 };
 
-// connected db, write backend
-
 export default connectDB;
