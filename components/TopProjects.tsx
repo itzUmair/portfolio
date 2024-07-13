@@ -34,7 +34,7 @@ function TopProjects() {
         ))}
       </div>
       <div className="flex justify-center mt-4">
-        <Button content="More Projects" image="/arrow.png" />
+        <Button content="More Projects" image="/arrow.png" link="/projects" />
       </div>
     </section>
   );
