@@ -26,5 +26,11 @@ export default function Button({
     </button>
   );
 
-  return link ? <Link href={link}> {defaultButton} </Link> : defaultButton;
+  return link ? (
+    <Link href={link} target="_blank">
+      {defaultButton}
+    </Link>
+  ) : (
+    defaultButton
+  );
 }
