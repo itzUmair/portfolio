@@ -9,7 +9,10 @@ export default function Hero() {
         Welcome To <br /> The Portfolio Of <br /> Muhammad Umair Khan
       </h1>
       <div className="flex gap-x-8 my-4">
-        <Button content="Resume" link="/resume" />
+        <Button
+          content="Resume"
+          link="https://firebasestorage.googleapis.com/v0/b/portfolio-b576f.appspot.com/o/Resume.pdf?alt=media&token=8529f9ce-7069-4806-a9d8-131310d70533"
+        />
         <Button content="Let's Connect" image="/arrow.png" link="#contact" />
       </div>
       <div className="flex justify-center">

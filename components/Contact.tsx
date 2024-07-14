@@ -31,7 +31,7 @@ export default function Contact() {
           image="/resume.png"
           alt="Resume"
           text="my resume"
-          link="/resume"
+          link="https://firebasestorage.googleapis.com/v0/b/portfolio-b576f.appspot.com/o/Resume.pdf?alt=media&token=8529f9ce-7069-4806-a9d8-131310d70533"
         />
       </div>
       <div className="flex flex-col lg:flex-row gap-8 lg:gap-x-16 mt-8 lg:mt-32">
