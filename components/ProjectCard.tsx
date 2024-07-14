@@ -1,6 +1,7 @@
 import { Project } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
+import Button from "./Button";
 
 function ProjectCard({ project }: { project: Project }) {
   return (
@@ -25,6 +26,18 @@ function ProjectCard({ project }: { project: Project }) {
             {tech}
           </p>
         ))}
+      </div>
+      <div className="flex flex-wrap gap-2 my-4">
+        <Button link={project.url} content="Site" image="/arrow.png" />
+
+        <Button
+          link={project.repository}
+          content="Repository"
+          image="/arrow.png"
+        />
+        {project.demoURL && (
+          <Button link={project.demoURL} content="Demo" image="/arrow.png" />
+        )}
       </div>
     </div>
   );
