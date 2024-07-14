@@ -6,6 +6,8 @@ import ProjectCard from "./ProjectCard";
 import { Project } from "@/types";
 import Button from "./Button";
 
+export const dynamic = "force-dynamic";
+
 function TopProjects() {
   const [projects, setProjects] = useState<Project[]>([]);
 
