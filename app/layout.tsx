@@ -18,12 +18,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={"mx-4 md:mx-16 lg:mx-32" + inter.className} >
+      <body
+        className={
+          "mx-4 md:mx-16 min-[2000px]:w-[1600px] min-[2000px]:mx-auto min-h-screen" +
+          inter.className
+        }
+      >
         <Header />
         {children}
         <Footer />
-        </body>
-
+      </body>
     </html>
   );
 }

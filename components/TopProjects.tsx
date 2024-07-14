@@ -28,7 +28,7 @@ function TopProjects() {
         Professional Highlights
       </h2>
       <p className="lg:text-2xl lg:text-center">My notable projects</p>
-      <div className="flex flex-col gap-4 lg:flex-row justify-between mt-8">
+      <div className="flex flex-col flex-wrap gap-4 lg:flex-row justify-between mt-8">
         {projects.map((project) => (
           <ProjectCard key={project.name} project={project} />
         ))}
