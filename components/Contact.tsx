@@ -25,7 +25,7 @@ export default function Contact() {
           image="/gmail.png"
           alt="Gmail"
           text="muhammadumair2511@gmail.com"
-          link=""
+          link="mailto:muhammadumair2511@gmail.com"
         />
         <Social
           image="/resume.png"
