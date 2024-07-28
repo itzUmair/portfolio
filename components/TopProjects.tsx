@@ -1,28 +1,24 @@
-"use client";
-
-import axios from "axios";
-import { useEffect, useState } from "react";
 import ProjectCard from "./ProjectCard";
 import { Project } from "@/types";
 import Button from "./Button";
 
-export const dynamic = "force-dynamic";
+async function getTopProjects() {
+  const response = await fetch(
+    `${process.env.PUBLIC_API_BASE_URL}/api/v1/projects/latest`,
+    {
+      next: { revalidate: 86400 },
+    }
+  );
 
-function TopProjects() {
-  const [projects, setProjects] = useState<Project[]>([]);
+  if (!response.ok) {
+    throw new Error("Something went wrong");
+  }
 
-  useEffect(() => {
-    const fetchProjects = async () => {
-      try {
-        const response = await axios.get("/api/v1/projects/latest");
-        console.log(response);
-        setProjects(response.data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    fetchProjects();
-  }, []);
+  return response.json();
+}
+
+async function TopProjects() {
+  const projects: Project[] = await getTopProjects();
 
   return (
     <section>
@@ -30,7 +26,7 @@ function TopProjects() {
         Professional Highlights
       </h2>
       <p className="lg:text-2xl lg:text-center">My notable projects</p>
-      <div className="flex flex-col flex-wrap gap-4 lg:flex-row justify-between mt-8">
+      <div className="flex flex-col flex-wrap gap-4 lg:flex-row mt-8">
         {projects.map((project) => (
           <ProjectCard key={project.name} project={project} />
         ))}

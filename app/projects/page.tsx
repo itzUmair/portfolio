@@ -25,7 +25,7 @@ export default async function page() {
         Project Showcase
       </h2>
       <p className="lg:text-2xl">Take a look at some of my finest work</p>
-      <section className="flex flex-wrap justify-between gap-y-4 mt-8">
+      <section className="flex flex-wrap gap-x-8 gap-y-4 mt-8">
         {projects.map((project) => (
           <ProjectCard key={project._id} project={project} />
         ))}
